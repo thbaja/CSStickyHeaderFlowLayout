@@ -141,7 +141,8 @@ static const NSInteger kHeaderZIndex = 1024;
         
         // Create the attributes for the Parallex header
         if (visibleParallexHeader && ! CGSizeEqualToSize(CGSizeZero, self.parallaxHeaderReferenceSize)) {
-            CSStickyHeaderFlowLayoutAttributes *currentAttribute = [CSStickyHeaderFlowLayoutAttributes layoutAttributesForSupplementaryViewOfKind:CSStickyHeaderParallaxHeader withIndexPath:[NSIndexPath indexPathWithIndex:0]];
+            CSStickyHeaderFlowLayoutAttributes *currentAttribute = [CSStickyHeaderFlowLayoutAttributes layoutAttributesForSupplementaryViewOfKind:CSStickyHeaderParallaxHeader
+                                                                                                                                    withIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
             [self updateParallaxHeaderAttribute:currentAttribute];
             
             [allItems addObject:currentAttribute];
